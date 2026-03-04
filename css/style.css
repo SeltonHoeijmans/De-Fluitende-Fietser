@@ -9,3 +9,64 @@ body {
     background-color: #555;
     color: #333;
 }
+
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1508973379184-7517410fb0a9') center/cover no-repeat;
+    height: 80vh;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.footer {
+    background-color: #0d1b2a;
+}
+
+.bike-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.bike-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bike-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.rental-card {
+    max-width: 600px;
+    margin: auto;
+    border: none;
+}
+
+.rental-card .form-check {
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.rental-card .form-check:hover {
+    background-color: #f8f9fa;
+}
