@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De Fluitende Fietser</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="index.html">De Fluitende Fietser</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fietsen.html">Fietsen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fietsverhuur.html">Fietsverhuur</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="over_ons.html">Over Ons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <header class="hero-section d-flex align-items-center text-white">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-3">De Fluitende Fietser</h1>
-            <p class="lead mb-4">Huur of koop de perfecte fiets voor jouw avontuur.</p>
-            <a href="fietsen.html" class="btn btn-primary btn-lg me-2">Bekijk Fietsen</a>
-            <a href="fietsverhuur.html" class="btn btn-outline-light btn-lg">Huur Nu</a>
+<body>
+
+    <header>
+        <a class="header-brand" href="index.html">
+            <img src="../assets/logo.png" alt="Logo De Fluitende Fietser">
+            <span>De Fluitende Fietser</span>
+        </a>
+        <div class="header-search">
+            <input type="text" placeholder="Zoeken...">
+            <button type="button">
+            </button>
         </div>
     </header>
 
-    <section class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Welkom</h2>
-            <p class="mx-auto" style="max-width: 700px;">
-                Bij De Fluitende Fietser vind je een ruim aanbod aan kwaliteitsfietsen.
-                Of je nu een fiets wilt huren voor een dagje uit of er één wilt kopen voor dagelijks gebruik,
-                wij helpen je graag op weg.
-            </p>
-        </div>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="fietsen.html">Fietsen</a></li>
+            <li><a href="fietsverhuur.html">Verhuur</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="over_ons.html">Over ons</a></li>
+        </ul>
+    </nav>
 
-    <footer class="footer text-white pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>De Fluitende Fietser</h5>
-                    <p>Kwaliteit en service sinds 1998.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Contact</h5>
-                    <p>Email: info@fluitendefietser.nl</p>
-                    <p>Telefoon: 040-1234567</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Volg ons</h5>
-                    <p>Facebook | Instagram</p>
-                </div>
+    <div class="winkel-status" id="winkelStatus"></div>
+
+    <div class="slider-wrapper">
+        <img src="../assets/sfeer1.jpg" class="slide active" alt="Sfeer 1">
+        <img src="../assets/sfeer2.jpg" class="slide" alt="Sfeer 2">
+        <img src="../assets/sfeer3.jpg" class="slide" alt="Sfeer 3">
+        <img src="../assets/sfeer4.jpg" class="slide" alt="Sfeer 4">
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#8249;</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#8250;</button>
+    </div>
+
+    <!-- WELKOMSTTEKST -->
+    <div class="welkomst">
+        <h2>Welkom bij De Fluitende Fietser</h2>
+        <p>
+            Bij De Fluitende Fietser vind je een ruim aanbod aan kwaliteitsfietsen.
+            Of je nu een fiets wilt huren voor een dagje uit of er één wilt kopen voor
+            dagelijks gebruik, wij helpen je graag op weg.
+        </p>
+        <a href="fietsen.html" class="btn btn-primary me-2">Bekijk Fietsen</a>
+        <a href="fietsverhuur.html" class="btn btn-outline-secondary">Huur Nu</a>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>De Fluitende Fietser</h5>
+                <p>Kwaliteit en service sinds 1998.</p>
             </div>
-            <div class="text-center pt-3 border-top border-secondary">
-                © 2026 De Fluitende Fietser
+            <div class="footer-col">
+                <h5>Links</h5>
+                <p><a href="over_ons.html">Over ons</a></p>
+                <p><a href="contact.html">Contact info</a></p>
             </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <p><a href="mailto:info@fluitendefietser.nl">info@fluitendefietser.nl</a></p>
+                <p><a href="https://www.facebook.com/fietsmagazine" target="_blank">Facebook</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 De Fluitende Fietser</p>
+            <p class="footer-kvk">KVK: 88599665 | BTW: NL999888492Z09</p>
+        </div>
+
+        <div class="fietser-baan">
+            <img id="fietser" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cycling_%28road%29_pictogram.svg/240px-Cycling_%28road%29_pictogram.svg.png" alt="Fietser">
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+
 </body>
 </html>

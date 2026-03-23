@@ -1,45 +1,163 @@
-* {
+/* ALGEMEEN */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* HEADER */
+header {
+    background-color: #a8d8ea;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.header-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.header-brand span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 5px 12px;
+    gap: 8px;
+}
+
+.header-search input {
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    width: 200px;
+}
+
+.header-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-search button svg {
+    width: 18px;
+    height: 18px;
+    fill: #555;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #1a1a2e;
+}
+
+nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #555;
-    color: #333;
+nav ul li a {
+    display: block;
+    padding: 14px 22px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
 }
 
-.hero-section {
-    background: url('https://images.unsplash.com/photo-1508973379184-7517410fb0a9') center/cover no-repeat;
-    height: 80vh;
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #a8d8ea;
+    color: #000;
+}
+
+/* SLIDER */
+.slider-wrapper {
     position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-height: 500px;
 }
 
-.hero-section::before {
-    content: "";
+.slider-wrapper img.slide {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: none;
+}
+
+.slider-wrapper img.slide.active {
+    display: block;
+}
+
+.slider-btn {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 16px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 4px;
 }
 
-.hero-section .container {
-    position: relative;
-    z-index: 2;
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+/* OPEN/GESLOTEN BADGE */
+.winkel-status {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-.btn {
-    transition: all 0.3s ease;
+.winkel-status.open {
+    background-color: #d4edda;
+    color: #155724;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
+.winkel-status.gesloten {
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
-.footer {
-    background-color: #0d1b2a;
+/* WELKOMST SECTIE */
+.welkomst {
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
 }
 
+/* BIKE CARDS */
 .bike-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
@@ -47,7 +165,7 @@ body {
 
 .bike-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .bike-card img {
@@ -55,6 +173,7 @@ body {
     object-fit: cover;
 }
 
+/* RENTAL */
 .rental-card {
     max-width: 600px;
     margin: auto;
@@ -69,4 +188,95 @@ body {
 
 .rental-card .form-check:hover {
     background-color: #f8f9fa;
+}
+
+/* CONTACT */
+.contact-card {
+    max-width: 700px;
+    margin: auto;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: #a8d8ea;
+    color: #ffffff;
+    padding: 40px 30px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-col h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.4);
+    padding-top: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-kvk {
+    font-size: 0.72rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* FIETSER ANIMATIE */
+.fietser-baan {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#fietser {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: auto;
+}
+
+/* BUTTONS */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 10px 16px;
+    }
 }
