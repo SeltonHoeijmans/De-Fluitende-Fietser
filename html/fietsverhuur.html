@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="index.html">De Fluitende Fietser</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fietsen.html">Fietsen</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="fietsverhuur.html">Fietsverhuur</a></li>
-                    <li class="nav-item"><a class="nav-link" href="over_ons.html">Over Ons</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+
+    <header>
+        <a class="header-brand" href="index.html">
+            <img src="../assets/logo.png" alt="Logo De Fluitende Fietser">
+            <span>De Fluitende Fietser</span>
+        </a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fietsen.html">Fietsen</a></li>
+            <li><a href="fietsverhuur.html" class="active">Verhuur</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="over_ons.html">Over ons</a></li>
+        </ul>
     </nav>
 
     <section class="py-5 text-center bg-light">
@@ -37,84 +37,84 @@
         <div class="container">
             <div class="card shadow-sm p-4 rental-card">
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="15" id="stadsfiets">
+                    <input class="form-check-input rental-option" type="checkbox" value="20" id="stadsfiets">
                     <label class="form-check-label d-flex justify-content-between" for="stadsfiets">
                         <span>Aanhangfiets</span>
                         <strong>€20,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="20" id="mountainbike">
+                    <input class="form-check-input rental-option" type="checkbox" value="35" id="mountainbike">
                     <label class="form-check-label d-flex justify-content-between" for="mountainbike">
                         <span>Bakfiets</span>
                         <strong>€35,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="30" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Driewielfiets</span>
                         <strong>€30,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="30" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Elektrische fiets</span>
                         <strong>€30,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="15" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Kinderfiets</span>
                         <strong>€15,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="45" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Ligfiets</span>
                         <strong>€45,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="12.50" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Oma fiets</span>
                         <strong>€12,50 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="15" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Racefiets</span>
                         <strong>€15,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="15" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Speed pedelec</span>
                         <strong>€15,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="12.50" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Stadsfiets</span>
                         <strong>€12,50 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="10" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Vouwfiets</span>
                         <strong>€10,00 / dag</strong>
                     </label>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input rental-option" type="checkbox" value="25" id="ebike">
+                    <input class="form-check-input rental-option" type="checkbox" value="15" id="ebike">
                     <label class="form-check-label d-flex justify-content-between" for="ebike">
                         <span>Zitfiets</span>
                         <strong>€ 15,00 / dag</strong>
@@ -149,8 +149,10 @@
                     <p>Facebook | Instagram</p>
                 </div>
             </div>
-            <div class="text-center pt-3 border-top border-secondary">
-                © 2026 De Fluitende Fietser
+            <div class="footer-bottom">
+                <p>© 2026 De Fluitende Fietser</p>
+                <p><a href="algemene_voorwaarden.html">Algemene Voorwaarden</a></p>
+                <p class="footer-kvk">KVK: 88599665 | BTW: NL999888492Z09</p>
             </div>
         </div>
     </footer>
